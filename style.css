@@ -1,0 +1,96 @@
+/* Page ka default gap hatao aur scrollbar band karo */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #070809;
+  color: white;
+}
+
+/* Canvas poori screen le */
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* "Loading bike..." screen ke beech mein */
+#loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+/* Credit upar left mein */
+#credit {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Buttons neeche, beech mein */
+#buttons {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2b2f36;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #444a55;
+}
+
+/* Info box upar right mein */
+#info {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 240px;
+  padding: 16px;
+  border-radius: 10px;
+  background: white;
+  color: black;
+}
+
+/* Jis par ye class ho wo chhup jata hai */
+.hidden {
+  display: none;
+}
+
+/* Mobile ke liye: screen 600px se chhoti ho to */
+@media (max-width: 600px) {
+  #info {
+    top: auto;
+    bottom: 120px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}

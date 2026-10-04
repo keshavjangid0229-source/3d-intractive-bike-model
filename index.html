@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sports Bike Showcase</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Browser ko batate hain ki Three.js kahan se aayega -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Is canvas par 3D bike dikhegi -->
+  <canvas id="scene"></canvas>
+
+  <!-- Model load hone tak ye dikhega -->
+  <div id="loading">Loading bike...</div>
+
+  <!-- Credit (CC-BY license ke liye zaroori) -->
+  <p id="credit">
+    Model: "Sports Bike" by Futurealiti, CC-BY-4.0
+  </p>
+
+  <!-- Info box: part ka naam aur details yahan aayengi -->
+  <div id="info" class="hidden"></div>
+
+  <!-- Neeche ke buttons -->
+  <div id="buttons">
+    <button id="btn-red">Red</button>
+    <button id="btn-black">Black</button>
+    <button id="btn-blue">Blue</button>
+    <button id="btn-engine">Engine</button>
+    <button id="btn-wheel">Front Wheel</button>
+    <button id="btn-reset">Reset</button>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
